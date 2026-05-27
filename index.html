@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sevyn & The Petal Crew — The Mystery Event</title>
+<meta name="description" content="Meet Sevyn and The Petal Crew! A brand new children's book series for ages 4–12. Book 1: The Mystery Event. Available June 1, 2026."/>
+<!-- Google tag (gtag.js) — Replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --purple:#7C3AED;--purple-light:#EDE9FF;--purple-dark:#4C1D95;
+  --pink:#EC4899;--pink-light:#FFF0F6;--pink-dark:#9D174D;
+  --gold:#C9A84C;--gold-light:#FFFBEA;--gold-dark:#92400E;
+  --violet:#6D28D9;--violet-light:#EEE9FF;
+  --green:#059669;--green-light:#ECFDF5;--green-dark:#065F46;
+  --cream:#FDFAF4;--dark:#0D0A1A;
+}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:#2D1A4E;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,244,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 2rem;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;color:var(--dark);letter-spacing:2px;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:0.85rem;font-weight:700;color:#5A4A6A;letter-spacing:1px;transition:color 0.2s;}
+.nav-links a:hover{color:var(--purple);}
+.nav-cta{background:var(--gold);color:var(--dark);padding:0.5rem 1.25rem;border-radius:20px;font-size:0.8rem;font-weight:800;letter-spacing:1px;text-decoration:none;transition:opacity 0.2s;}
+.nav-cta:hover{opacity:0.85;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 2rem 4rem;background:linear-gradient(160deg,#1A0A2E 0%,#2D1060 40%,#1A0A2E 100%);position:relative;overflow:hidden;}
+.hero-petals{position:absolute;inset:0;pointer-events:none;}
+.petal{position:absolute;border-radius:50% 0 50% 0;opacity:0.15;animation:float 6s ease-in-out infinite;}
+.petal:nth-child(1){width:60px;height:60px;background:var(--purple);top:10%;left:8%;animation-delay:0s;}
+.petal:nth-child(2){width:40px;height:40px;background:var(--pink);top:20%;right:10%;animation-delay:1s;}
+.petal:nth-child(3){width:80px;height:80px;background:var(--gold);bottom:20%;left:5%;animation-delay:2s;}
+.petal:nth-child(4){width:50px;height:50px;background:var(--green);bottom:30%;right:8%;animation-delay:0.5s;}
+.petal:nth-child(5){width:35px;height:35px;background:var(--violet);top:50%;left:3%;animation-delay:1.5s;}
+.petal:nth-child(6){width:55px;height:55px;background:var(--pink);top:60%;right:5%;animation-delay:2.5s;}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-20px) rotate(10deg);}}
+.hero-badge{display:inline-block;background:var(--gold);color:var(--dark);font-size:0.7rem;font-weight:800;letter-spacing:3px;padding:0.4rem 1.2rem;border-radius:20px;margin-bottom:1.5rem;}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(3rem,8vw,6rem);color:#fff;font-weight:900;line-height:1;letter-spacing:2px;margin-bottom:0.5rem;}
+.hero h1 span{color:var(--gold);}
+.hero-sub{font-family:'Cinzel',serif;font-size:clamp(0.9rem,2vw,1.2rem);color:var(--gold);letter-spacing:6px;margin-bottom:1rem;}
+.hero-divider{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1rem 0;}
+.hero-divider line-el{display:block;width:80px;height:1px;background:var(--gold);opacity:0.5;}
+.hero-divider-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.5vw,1.4rem);color:#E8D5B0;font-style:italic;margin-bottom:2rem;line-height:1.6;}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--gold);color:var(--dark);padding:0.9rem 2rem;border-radius:30px;font-size:0.9rem;font-weight:800;letter-spacing:2px;text-decoration:none;transition:transform 0.2s,opacity 0.2s;}
+.btn-primary:hover{transform:translateY(-2px);opacity:0.9;}
+.btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(201,168,76,0.6);padding:0.9rem 2rem;border-radius:30px;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-decoration:none;transition:all 0.2s;}
+.btn-secondary:hover{background:rgba(201,168,76,0.1);}
+.hero-launch{margin-top:2.5rem;font-size:0.8rem;color:rgba(255,255,255,0.4);letter-spacing:2px;}
+
+/* COLOR BAND */
+.color-band{display:flex;height:6px;}
+.color-band div{flex:1;}
+
+/* ABOUT SECTION */
+.section{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:4px;color:var(--gold);margin-bottom:0.75rem;text-align:center;}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--dark);text-align:center;margin-bottom:1rem;font-weight:700;}
+.section-sub{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#5A4A6A;text-align:center;max-width:600px;margin:0 auto 3rem;line-height:1.7;font-style:italic;}
+.divider-gold{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.5rem auto;}
+.divider-gold span{display:block;width:60px;height:1px;background:var(--gold);opacity:0.4;}
+.divider-gold-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:0.7;}
+
+/* BOOK SYNOPSIS */
+.synopsis-wrap{background:#fff;border-radius:20px;border:1px solid rgba(201,168,76,0.2);padding:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.synopsis-cover{background:linear-gradient(135deg,#1A0A2E,#2D1060);border-radius:16px;aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;position:relative;overflow:hidden;}
+.synopsis-cover::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(201,168,76,0.15),transparent 60%);}
+.cover-title{font-family:'Cinzel',serif;font-size:1.8rem;color:#fff;font-weight:900;line-height:1.1;margin-bottom:0.5rem;position:relative;}
+.cover-title span{color:var(--gold);}
+.cover-sub{font-family:'Cormorant Garamond',serif;font-size:0.9rem;color:var(--gold);letter-spacing:3px;margin-bottom:1.5rem;position:relative;}
+.cover-dots{display:flex;gap:8px;justify-content:center;position:relative;}
+.cover-dots span{width:14px;height:14px;border-radius:50%;}
+.synopsis-text h3{font-family:'Cinzel',serif;font-size:1.4rem;color:var(--dark);margin-bottom:1rem;}
+.synopsis-text p{font-size:1rem;color:#5A4A6A;line-height:1.8;margin-bottom:1rem;}
+.synopsis-meta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
+.meta-tag{background:var(--gold-light);border:1px solid rgba(201,168,76,0.3);color:var(--gold-dark);font-size:0.75rem;font-weight:700;letter-spacing:2px;padding:0.4rem 1rem;border-radius:20px;}
+.synopsis-cta{margin-top:1.5rem;}
+
+/* CHARACTERS */
+.characters-section{background:linear-gradient(180deg,var(--cream) 0%,#F0E8FF 50%,var(--cream) 100%);padding:5rem 2rem;}
+.characters-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;}
+.char-card{background:#fff;border-radius:20px;padding:1.5rem 1rem;text-align:center;border:2px solid transparent;transition:transform 0.3s,box-shadow 0.3s;cursor:default;}
+.char-card:hover{transform:translateY(-8px);}
+.char-card.sevyn{border-color:var(--purple-light);}
+.char-card.sevyn:hover{box-shadow:0 12px 40px rgba(124,58,237,0.2);}
+.char-card.bloom{border-color:#F9D5E8;}
+.char-card.bloom:hover{box-shadow:0 12px 40px rgba(236,72,153,0.2);}
+.char-card.lux{border-color:rgba(201,168,76,0.3);}
+.char-card.lux:hover{box-shadow:0 12px 40px rgba(201,168,76,0.25);}
+.char-card.reign{border-color:var(--violet-light);}
+.char-card.reign:hover{box-shadow:0 12px 40px rgba(109,40,217,0.2);}
+.char-card.core{border-color:#C6F6E4;}
+.char-card.core:hover{box-shadow:0 12px 40px rgba(5,150,105,0.2);}
+.char-avatar{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Cinzel',serif;font-size:2rem;font-weight:900;color:#fff;}
+.char-card.sevyn .char-avatar{background:var(--purple);}
+.char-card.bloom .char-avatar{background:var(--pink);}
+.char-card.lux .char-avatar{background:var(--gold);}
+.char-card.reign .char-avatar{background:var(--violet);}
+.char-card.core .char-avatar{background:var(--green);}
+.char-name{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;margin-bottom:0.25rem;}
+.char-card.sevyn .char-name{color:var(--purple-dark);}
+.char-card.bloom .char-name{color:var(--pink-dark);}
+.char-card.lux .char-name{color:var(--gold-dark);}
+.char-card.reign .char-name{color:var(--violet);}
+.char-card.core .char-name{color:var(--green-dark);}
+.char-role{font-size:0.75rem;font-weight:700;letter-spacing:2px;margin-bottom:0.5rem;opacity:0.7;}
+.char-card.sevyn .char-role{color:var(--purple);}
+.char-card.bloom .char-role{color:var(--pink);}
+.char-card.lux .char-role{color:var(--gold);}
+.char-card.reign .char-role{color:var(--violet);}
+.char-card.core .char-role{color:var(--green);}
+.char-age{font-size:0.75rem;color:#9A8AAA;margin-bottom:0.75rem;}
+.char-catchphrase{font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-style:italic;color:#5A4A6A;line-height:1.5;border-top:1px solid #F0E8FF;padding-top:0.75rem;margin-top:0.25rem;}
+
+/* WHY THIS BOOK */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2rem;}
+.why-card{background:#fff;border-radius:16px;padding:1.75rem;border:1px solid rgba(201,168,76,0.15);display:flex;gap:1rem;align-items:flex-start;}
+.why-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.why-card:nth-child(1) .why-icon{background:var(--purple-light);}
+.why-card:nth-child(2) .why-icon{background:var(--gold-light);}
+.why-card:nth-child(3) .why-icon{background:var(--pink-light);}
+.why-card:nth-child(4) .why-icon{background:var(--green-light);}
+.why-card h4{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--dark);margin-bottom:0.4rem;}
+.why-card p{font-size:0.88rem;color:#5A4A6A;line-height:1.6;}
+
+/* EMAIL SIGNUP */
+.signup-section{background:linear-gradient(135deg,#1A0A2E,#2D1060);padding:5rem 2rem;text-align:center;}
+.signup-section .section-label{color:var(--gold);}
+.signup-section .section-title{color:#fff;}
+.signup-section .section-sub{color:#C4B5FD;}
+.signup-form{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;}
+.signup-form input{padding:0.85rem 1.5rem;border-radius:30px;border:1px solid rgba(201,168,76,0.4);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:'Nunito',sans-serif;width:300px;outline:none;}
+.signup-form input::placeholder{color:rgba(255,255,255,0.4);}
+.signup-form button{background:var(--gold);color:var(--dark);padding:0.85rem 2rem;border-radius:30px;border:none;font-size:0.85rem;font-weight:800;letter-spacing:2px;cursor:pointer;font-family:'Nunito',sans-serif;transition:opacity 0.2s;}
+.signup-form button:hover{opacity:0.85;}
+.signup-note{font-size:0.75rem;color:rgba(255,255,255,0.3);margin-top:1rem;letter-spacing:1px;}
+
+/* ORDER SECTION */
+.order-section{padding:5rem 2rem;text-align:center;background:var(--cream);}
+.order-box{max-width:700px;margin:0 auto;background:#fff;border-radius:24px;border:1px solid rgba(201,168,76,0.2);padding:3rem;box-shadow:0 20px 60px rgba(45,26,78,0.06);}
+.order-launch-date{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:4px;color:var(--gold);margin-bottom:1rem;}
+.order-title{font-family:'Cinzel',serif;font-size:2rem;color:var(--dark);margin-bottom:0.5rem;}
+.order-formats{display:flex;gap:0.75rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap;}
+.format-pill{background:var(--purple-light);color:var(--purple-dark);font-size:0.75rem;font-weight:700;letter-spacing:2px;padding:0.4rem 1rem;border-radius:20px;}
+.format-pill.gold{background:var(--gold-light);color:var(--gold-dark);}
+.format-pill.pink{background:var(--pink-light);color:var(--pink-dark);}
+.order-amazon-btn{display:inline-block;background:var(--gold);color:var(--dark);padding:1rem 2.5rem;border-radius:30px;font-size:1rem;font-weight:800;letter-spacing:2px;text-decoration:none;margin-top:1rem;transition:transform 0.2s,opacity 0.2s;}
+.order-amazon-btn:hover{transform:translateY(-3px);opacity:0.9;}
+.order-link{display:block;font-size:0.75rem;color:#9A8AAA;margin-top:0.75rem;letter-spacing:1px;}
+
+/* FOOTER */
+footer{background:#0D0A1A;padding:3rem 2rem;text-align:center;}
+.footer-logo{font-family:'Cinzel',serif;font-size:1.1rem;color:#fff;letter-spacing:3px;margin-bottom:0.5rem;}
+.footer-logo span{color:var(--gold);}
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:rgba(255,255,255,0.3);font-style:italic;margin-bottom:1.5rem;}
+.footer-links{display:flex;gap:2rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap;}
+.footer-links a{font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:2px;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.15);letter-spacing:1px;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .synopsis-wrap{grid-template-columns:1fr;}
+  .characters-grid{grid-template-columns:repeat(2,1fr);}
+  .why-grid{grid-template-columns:1fr;}
+  .char-card.lux{grid-column:1/-1;max-width:200px;margin:0 auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">SEVYN <span>&</span> THE PETAL CREW</div>
+    <ul class="nav-links">
+      <li><a href="#book">The Book</a></li>
+      <li><a href="#characters">The Crew</a></li>
+      <li><a href="#why">For Parents</a></li>
+      <li><a href="#order">Order</a></li>
+    </ul>
+    <a href="https://a.co/d/0afY7ovZ" target="_blank" class="nav-cta" onclick="gtag('event','click',{event_category:'CTA',event_label:'Nav Preorder'})">PREORDER NOW</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-petals">
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  </div>
+  <div>
+    <div class="hero-badge">BOOK 1 · AVAILABLE JUNE 1, 2026</div>
+    <h1>SEVYN<br/><span>&</span><br/>THE PETAL CREW</h1>
+    <p class="hero-sub">THE MYSTERY EVENT</p>
+    <div class="hero-divider">
+      <line-el></line-el>
+      <div class="hero-divider-dot"></div>
+      <line-el></line-el>
+    </div>
+    <p class="hero-tagline">A mystery is unfolding at Higgsfield Academy.<br/>Five brilliant kids. One unforgettable mission.<br/>Every child can find themselves in this story.</p>
+    <div class="hero-buttons">
+      <a href="https://a.co/d/0afY7ovZ" target="_blank" class="btn-primary" onclick="gtag('event','click',{event_category:'CTA',event_label:'Hero Preorder'})">PREORDER ON AMAZON →</a>
+      <a href="#characters" class="btn-secondary">MEET THE CREW</a>
+    </div>
+    <p class="hero-launch">AGES 4–12 · KINDLE & PAPERBACK</p>
+  </div>
+</section>
+
+<!-- COLOR BAND -->
+<div class="color-band">
+  <div style="background:#7C3AED"></div>
+  <div style="background:#EC4899"></div>
+  <div style="background:#C9A84C"></div>
+  <div style="background:#6D28D9"></div>
+  <div style="background:#059669"></div>
+</div>
+
+<!-- BOOK SYNOPSIS -->
+<section id="book" style="padding:5rem 2rem;background:var(--cream);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p class="section-label">THE STORY</p>
+    <h2 class="section-title">What's The Mystery Event?</h2>
+    <div class="divider-gold"><span></span><div class="divider-gold-dot"></div><span></span></div>
+    <div class="synopsis-wrap">
+      <div class="synopsis-cover">
+        <div class="cover-title">SEVYN<br/><span>&</span><br/>THE PETAL CREW</div>
+        <div class="cover-sub">THE MYSTERY EVENT</div>
+        <div class="cover-dots">
+          <span style="background:#8B5CF6"></span>
+          <span style="background:#EC4899"></span>
+          <span style="background:#C9A84C"></span>
+          <span style="background:#6D28D9"></span>
+          <span style="background:#34D399"></span>
+        </div>
+      </div>
+      <div class="synopsis-text">
+        <h3>Book 1 of the Petal Crew Series</h3>
+        <p>Something mysterious is happening at Higgsfield Academy — and only Sevyn and her crew have what it takes to figure it out.</p>
+        <p>With Sevyn's vision, Bloom's heart, Lux's sharp mind, Reign's strategy, and Core's creativity, this team of five extraordinary kids discovers that the greatest superpower of all is knowing who you are.</p>
+        <p>A story about friendship, courage, and the magic that happens when everyone brings their best to the table.</p>
+        <div class="synopsis-meta">
+          <span class="meta-tag">AGES 4–12</span>
+          <span class="meta-tag">KINDLE</span>
+          <span class="meta-tag">PAPERBACK</span>
+          <span class="meta-tag">BOOK 1 OF SERIES</span>
+        </div>
+        <div class="synopsis-cta">
+          <a href="https://a.co/d/0afY7ovZ" target="_blank" class="btn-primary" style="display:inline-block;font-size:0.85rem;">PREORDER NOW →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARACTERS -->
+<section id="characters" class="characters-section">
+  <p class="section-label">THE PETAL CREW</p>
+  <h2 class="section-title">Meet the Characters</h2>
+  <div class="divider-gold" style="margin-bottom:2.5rem;"><span></span><div class="divider-gold-dot"></div><span></span></div>
+  <div class="characters-grid">
+    <div class="char-card sevyn">
+      <div class="char-avatar">S</div>
+      <div class="char-name">Sevyn</div>
+      <div class="char-role">THE VISIONARY</div>
+      <div class="char-age">Age 12 · Purple</div>
+      <div class="char-catchphrase">"I don't just see what is — I see what could be."</div>
+    </div>
+    <div class="char-card bloom">
+      <div class="char-avatar">B</div>
+      <div class="char-name">Bloom</div>
+      <div class="char-role">THE EMPATH</div>
+      <div class="char-age">Age 11 · Blush Pink</div>
+      <div class="char-catchphrase">"I feel it before anyone else even notices."</div>
+    </div>
+    <div class="char-card lux">
+      <div class="char-avatar">L</div>
+      <div class="char-name">Lux</div>
+      <div class="char-role">THE ANALYST</div>
+      <div class="char-age">Age 11 · Golden Yellow</div>
+      <div class="char-catchphrase">"The numbers always tell the truth."</div>
+    </div>
+    <div class="char-card reign">
+      <div class="char-avatar">R</div>
+      <div class="char-name">Reign</div>
+      <div class="char-role">THE STRATEGIST</div>
+      <div class="char-age">Age 12 · Royal Purple</div>
+      <div class="char-catchphrase">"Every move matters. Plan before you act."</div>
+    </div>
+    <div class="char-card core">
+      <div class="char-avatar">C</div>
+      <div class="char-name">Core</div>
+      <div class="char-role">THE CREATIVE</div>
+      <div class="char-age">Age 11 · Emerald Green</div>
+      <div class="char-catchphrase">"There's always a creative way through."</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS BOOK -->
+<section id="why" style="padding:5rem 2rem;background:var(--cream);">
+  <div class="section" style="padding:0;">
+    <p class="section-label">FOR PARENTS & EDUCATORS</p>
+    <h2 class="section-title">Why Kids Love This Book</h2>
+    <p class="section-sub">More than a mystery — it's a mirror. Every child who reads it will find a character that feels like them.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">⭐</div>
+        <div>
+          <h4>Builds Confidence</h4>
+          <p>Each character models a unique strength — helping kids recognize and celebrate what makes them powerful.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔍</div>
+        <div>
+          <h4>Sparks Curiosity</h4>
+          <p>A mystery-driven plot that keeps young readers engaged and turning pages from start to finish.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <div>
+          <h4>Celebrates Teamwork</h4>
+          <p>Five kids with different gifts working together — showing that collaboration creates something none could do alone.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌸</div>
+        <div>
+          <h4>Every Child Belongs</h4>
+          <p>Characters of varied personalities and strengths so every reader — regardless of background — sees themselves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL SIGNUP -->
+<section class="signup-section">
+  <p class="section-label">STAY IN THE LOOP</p>
+  <h2 class="section-title">Join the Petal Crew Community</h2>
+  <p class="section-sub" style="color:#C4B5FD;">Get updates, free character cards, and be the first to know about Book 2.</p>
+  <div class="signup-form">
+    <input type="email" placeholder="Enter your email address"/>
+    <button type="button">JOIN THE CREW →</button>
+  </div>
+  <p class="signup-note">No spam. Just magic. Unsubscribe anytime.</p>
+</section>
+
+<!-- ORDER SECTION -->
+<section id="order" class="order-section">
+  <div class="order-box">
+    <p class="order-launch-date">AVAILABLE JUNE 1, 2026</p>
+    <h2 class="order-title">Get Your Copy Today</h2>
+    <div class="divider-gold"><span></span><div class="divider-gold-dot"></div><span></span></div>
+    <div class="order-formats">
+      <span class="format-pill">KINDLE EBOOK</span>
+      <span class="format-pill gold">PREORDER NOW</span>
+      <span class="format-pill pink">PAPERBACK</span>
+    </div>
+    <p style="font-size:0.9rem;color:#5A4A6A;line-height:1.7;margin-top:1rem;">Preorder the Kindle edition now and it will automatically deliver to your device on June 1, 2026. Perfect for reading together or gifting to the young dreamer in your life.</p>
+    <a href="https://a.co/d/0afY7ovZ" target="_blank" class="order-amazon-btn" onclick="gtag('event','click',{event_category:'CTA',event_label:'Order Section'})">ORDER ON AMAZON →</a>
+    <span class="order-link">a.co/d/0afY7ovZ</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SEVYN <span>&</span> THE PETAL CREW</div>
+  <p class="footer-tagline">"If you want ordinary, stay seated. We're shaking tables for the unforgettable."</p>
+  <div class="footer-links">
+    <a href="#book">The Book</a>
+    <a href="#characters">The Crew</a>
+    <a href="#why">For Parents</a>
+    <a href="https://a.co/d/0afY7ovZ" target="_blank">Order</a>
+    <a href="https://thesevynexperience.com" target="_blank">The Sevyn Experience</a>
+  </div>
+  <p class="footer-copy">© 2026 The Sevyn Experience · Sevyn & The Petal Crew · All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
