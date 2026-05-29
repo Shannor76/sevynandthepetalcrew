@@ -219,7 +219,7 @@ footer{background:#0D0A1A;padding:3rem 2rem;text-align:center;}
       <a href="https://a.co/d/0afY7ovZ" target="_blank" class="btn-primary" onclick="gtag('event','click',{event_category:'CTA',event_label:'Hero Preorder'})">PREORDER ON AMAZON →</a>
       <a href="#characters" class="btn-secondary">MEET THE CREW</a>
     </div>
-    <p class="hero-launch">AGES 4–12 · KINDLE & PAPERBACK</p>
+    <p class="hero-launch">AGES 4–12 · HARDCOVER · PAPERBACK · KINDLE EBOOK</p>
   </div>
 </section>
 
@@ -249,8 +249,9 @@ footer{background:#0D0A1A;padding:3rem 2rem;text-align:center;}
         <p>A story about friendship, courage, and the magic that happens when everyone brings their best to the table.</p>
         <div class="synopsis-meta">
           <span class="meta-tag">AGES 4–12</span>
-          <span class="meta-tag">KINDLE</span>
+          <span class="meta-tag">HARDCOVER</span>
           <span class="meta-tag">PAPERBACK</span>
+          <span class="meta-tag">KINDLE EBOOK</span>
           <span class="meta-tag">BOOK 1 OF SERIES</span>
         </div>
         <div style="margin-top:1.5rem;">
@@ -345,6 +346,79 @@ footer{background:#0D0A1A;padding:3rem 2rem;text-align:center;}
   </div>
 </section>
 
+<!-- THEME SONG SECTION -->
+<section style="background:linear-gradient(135deg,#1A0A2E,#2D1060);padding:5rem 2rem;text-align:center;">
+  <p class="section-label">THE OFFICIAL THEME SONG</p>
+  <h2 class="section-title" style="color:#fff;">Golden Envelopes</h2>
+  <div class="divider-gold"><span></span><div class="divider-gold-dot"></div><span></span></div>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#C4B5FD;font-style:italic;max-width:500px;margin:0 auto 2.5rem;">The magical theme song of Sevyn & The Petal Crew universe. Press play and step into The Bloomhouse. ✨</p>
+
+  <!-- Custom Audio Player -->
+  <div style="max-width:560px;margin:0 auto;">
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:2rem;backdrop-filter:blur(10px);">
+      <!-- Album art -->
+      <img src="https://cdn2.suno.ai/image_large_0b4aa468-8545-4048-bec9-c362dad2c897.jpeg" alt="Golden Envelopes" style="width:180px;height:180px;border-radius:16px;object-fit:cover;margin:0 auto 1.5rem;display:block;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:2px solid rgba(201,168,76,0.4);"/>
+      <div style="font-family:'Cinzel',serif;font-size:1rem;color:#fff;margin-bottom:0.25rem;">Golden Envelopes</div>
+      <div style="font-size:0.75rem;color:rgba(201,168,76,0.7);letter-spacing:2px;margin-bottom:1.5rem;">THE SEVYN EXPERIENCE</div>
+      <!-- Audio element -->
+      <audio id="themeAudio" src="https://cdn1.suno.ai/0b4aa468-8545-4048-bec9-c362dad2c897.mp3" preload="none" style="display:none;"></audio>
+      <!-- Play button -->
+      <button id="playBtn" onclick="togglePlay()" style="background:var(--gold);color:#0D0A1A;border:none;border-radius:50px;padding:0.85rem 2.5rem;font-family:'Nunito',sans-serif;font-size:0.9rem;font-weight:800;letter-spacing:2px;cursor:pointer;transition:opacity 0.2s;margin-bottom:1rem;">▶ PLAY THEME SONG</button>
+      <!-- Progress bar -->
+      <div style="background:rgba(255,255,255,0.1);border-radius:10px;height:4px;margin-top:1rem;overflow:hidden;">
+        <div id="progressBar" style="background:var(--gold);height:4px;width:0%;border-radius:10px;transition:width 0.5s;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:0.5rem;">
+        <span id="currentTime" style="font-size:0.7rem;color:rgba(255,255,255,0.3);">0:00</span>
+        <span id="duration" style="font-size:0.7rem;color:rgba(255,255,255,0.3);">--:--</span>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.8rem;color:rgba(255,255,255,0.2);letter-spacing:1px;">🎵 Created with Suno AI · The Sevyn Experience</p>
+  </div>
+</section>
+
+<script>
+const audio = document.getElementById('themeAudio');
+const btn = document.getElementById('playBtn');
+const bar = document.getElementById('progressBar');
+const curr = document.getElementById('currentTime');
+const dur = document.getElementById('duration');
+
+function togglePlay(){
+  if(audio.paused){
+    audio.play();
+    btn.textContent='⏸ PAUSE';
+    gtag('event','play',{event_category:'Theme Song',event_label:'Golden Envelopes'});
+  } else {
+    audio.pause();
+    btn.textContent='▶ PLAY THEME SONG';
+  }
+}
+
+function fmt(s){
+  const m=Math.floor(s/60);
+  const sec=Math.floor(s%60);
+  return m+':'+(sec<10?'0':'')+sec;
+}
+
+audio.addEventListener('timeupdate',()=>{
+  if(audio.duration){
+    bar.style.width=(audio.currentTime/audio.duration*100)+'%';
+    curr.textContent=fmt(audio.currentTime);
+  }
+});
+
+audio.addEventListener('loadedmetadata',()=>{
+  dur.textContent=fmt(audio.duration);
+});
+
+audio.addEventListener('ended',()=>{
+  btn.textContent='▶ PLAY THEME SONG';
+  bar.style.width='0%';
+  curr.textContent='0:00';
+});
+</script>
+
 <!-- EMAIL SIGNUP -->
 <section class="signup-section">
   <p class="section-label">STAY IN THE LOOP</p>
@@ -364,11 +438,12 @@ footer{background:#0D0A1A;padding:3rem 2rem;text-align:center;}
     <h2 class="order-title">Get Your Copy Today</h2>
     <div class="divider-gold"><span></span><div class="divider-gold-dot"></div><span></span></div>
     <div class="order-formats">
-      <span class="format-pill">KINDLE EBOOK</span>
+      <span class="format-pill">HARDCOVER</span>
       <span class="format-pill gold">PREORDER NOW</span>
       <span class="format-pill pink">PAPERBACK</span>
+      <span class="format-pill" style="background:var(--green-light);color:var(--green-dark);">KINDLE EBOOK</span>
     </div>
-    <p style="font-size:0.9rem;color:#5A4A6A;line-height:1.7;margin-top:1rem;">Preorder the Kindle edition now and it will automatically deliver to your device on June 1, 2026. Perfect for reading together or gifting to the young dreamer in your life.</p>
+    <p style="font-size:0.9rem;color:#5A4A6A;line-height:1.7;margin-top:1rem;">Available in hardcover, paperback, and Kindle ebook. Preorder the Kindle edition now and it will automatically deliver to your device on June 1, 2026. Perfect for reading together, classroom sets, or gifting to the young dreamer in your life.</p>
     <a href="https://a.co/d/0afY7ovZ" target="_blank" class="order-amazon-btn" onclick="gtag('event','click',{event_category:'CTA',event_label:'Order Section'})">ORDER ON AMAZON →</a>
     <span class="order-link">a.co/d/0afY7ovZ</span>
   </div>
